@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %} Movizz Palace {% endblock %}</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" 
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+        <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet"> 
+
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Acme&family=Philosopher&display=swap" rel="stylesheet"> 
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Movizz Palace</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler01" aria-controls="navbarToggler01" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end ms-5" id="navbarToggler01">
+                    <ul class="navbar-nav mb-2 mb-lg-0 me-5">
+                        <li class="nav-item me-2">
+                            <a class="nav-link {{ status[0] }}" href="{{ url_for('index') }}"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
+                        </li>
+                        <li class="nav-item me-2">
+                            <a class="nav-link {{ status[1] }}" href="{{ url_for('addmovies') }}"><i class="fa fa-video-camera" aria-hidden="true"></i> Add Movies</a>
+                        </li>
+                        <li class="nav-item me-2">
+                            <a class="nav-link {{ status[2] }}" href="{{ url_for('update_movies') }}"><i class="fa fa-database" aria-hidden="true"></i> Update Database</a>
+                        </li>
+                        <li class="nav-item me-2">
+                            <a class="nav-link {{ status[3] }}" href="{{ url_for('delete_movies') }}"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Delete Movies</a>
+                        </li>
+                        <li class="nav-item me-2">
+                            <a class="nav-link {{ status[4] }}" href="{{ url_for('about') }}"><i class="fa fa-info-circle" aria-hidden="true"></i> About Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container">
+            {% block content %}{% endblock %}
+        </div>
+        <footer class="bg-dark text-light mt-5 p-5" style="height:40vh;">
+            <div class="row" style="height:90%;">
+                <div class="col">
+                    <h5><strong style="text-decoration: underline;">Movizz Palace</strong></h5>
+                </div>
+                <div class="col">
+                    <h5><strong style="text-decoration: underline;">Connect  Us: </strong></h5>
+                </div>
+            </div>
+            <div class="row">
+                <h5>Copyright 2021 | Developed by Rhuchita &#9824;</h5>
+            </div>
+        </footer>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    </body>
+</html>
