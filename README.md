@@ -7,16 +7,16 @@ The application includes all the CRUD operations on the database. User can add n
 
 # _The database Schema is as :_
 Table Name: Movies
-   Movie ID
-   Movie Name
-   Year of Release
-   Director
-   Language
-   Genre
-   Rating 
-   Rating
-   IMDB
-   Runtime
+  - Movie ID
+  - Movie Name
+  - Year of Release
+  - Director
+  - Language
+  - Genre
+  - Rating 
+  - Rating
+  - IMDB
+  - Runtime
 
 > The application is developed using following technologies:
 >   Python, Flask Framework, MySQL, HTML/CSS
